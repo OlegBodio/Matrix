@@ -18,6 +18,7 @@ int main()
 	auto col = test.getLine(0);
 	auto line = test.getColumn(0);
 
+	std::cout << std::endl << std::endl;
 	(test * test).print();
 	
 }

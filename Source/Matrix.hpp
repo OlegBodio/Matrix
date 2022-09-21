@@ -105,12 +105,11 @@ private:
 	using ColumnType = std::vector<RowType>;
 	ColumnType m_matrix;
 
-	RowType* operator[](int index) const 
+	RowType* operator[](int index) 
 	{
 		if (index < m_h && index >= 0)
 		{
-			auto vec = m_matrix[index];
-			return &vec;
+			return &m_matrix[index];
 		}
 		else
 		{
