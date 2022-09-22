@@ -6,19 +6,20 @@
 
 using Vector3i = Vector3<int>;
 
+using namespace std;
+
 int main() 
 {
+
 	unsigned w = 3;
 	unsigned h = 3;
 
 	Vector3i testVec(1, 2, 3);
-	Matrix<int> test(w, h);
-	test.fillRandom();
-	test.print();
-	auto col = test.getLine(0);
-	auto line = test.getColumn(0);
-
+	Matrix<double> test1(w, h);
+	test1.fillFromExample();
+	test1.print();
 	std::cout << std::endl << std::endl;
-	(test * test).print();
-	
+
+	(test1 * test1.getRotatedmatrix()).print();
 }
+
